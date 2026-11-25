@@ -17,6 +17,8 @@ The report includes the frame selected in the Profiler and the 10 slowest Main T
 
 Reports are saved to `Library/ProfilerReports` with increasing names such as `ProfilerReport_0001.csv`. Existing reports are kept.
 
+When imported into a Git repository, the editor tool adds its `Assets/UnityProfilerCSVExporter` folder and folder metadata to that repository's local `.git/info/exclude`. The repository's shared `.gitignore` is not changed.
+
 ## CSV contents and limitations
 
 Each reported frame contains its Main Thread sample hierarchy, with frame number, sample depth and name, total time, self time, GC allocation, and call count. The report is a CSV file, not an Excel workbook, and currently contains **Main Thread only**; it is not a full-session export of every frame or every Profiler thread.
